@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;  /* Memusatkan secara horizontal */
+    align-items: center;      /* Memusatkan secara vertikal */
+    background: url("../image/green.png") no-repeat left;
+    background-size: 50% 100%;  /* Latar belakang pada sisi kiri */
+    background-color: #f5f5f5;  /* Warna latar untuk sisi kanan */
+}
+
+.content {
+    text-align: center;        /* Mengatur teks agar berada di tengah */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 48px;
+    color: #333;
+}
+
+p {
+    font-size: 20px;
+    color: #666;
+}
+
+
+.container {
+    display: flex;
+    width: 20%;
+    height: 50%;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    padding-left: 50px; 
+}
+
+.left-side {
+    flex: 1;
+    background-color: #ffffff;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.left-side h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.left-side p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.left-side .login-now {
+    font-weight: bold;
+}
+
+.right-side {
+    flex: 1;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    width: 80%;
+    max-width: 350px;
+    background-color: #ffffff;
+    padding: 30px;
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.login-box label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn.signin {
+    background-color: #000000;
+}
+
+.btn.signup {
+    background-color: #000000;
+}
