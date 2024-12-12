@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pupuk Organizer</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <!-- Navbar -->
+    <div id="snackbar">Apakah Anda Ingin Melakukan Login</div>
     <nav class="navbar">
         <div class="logo">
             <img src="image/logooo.png" alt="Logo">
-            <div class="hamburger" id="hamburger">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
         </div>
-        <ul class="nav-links">
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="nav-links" id="navLinks">
             <li><a href="#">Home</a></li>
             <li><a href="#">Features</a></li>
             <li><a href="#">Product</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">Chart</a></li>
         </ul>
-        <a href="register.html"><button class="register-btn">Register Now <span class="arrow">→</span></button></a>
+        <a href="register.php"><button class="register-btn">Register Now <span class="arrow">→</span></button></a>
     </nav>
 
     <!-- Hero Section -->
@@ -34,7 +36,7 @@
             <h2 class="highlight">Win Solution</h2>
             <p>Where to grow your business as a photographer: site or social media?</p>
             <div class="button-container">
-                <a href="dashboard.html"><button class="btn login">Login</button></a>
+                <a href="login.php"><button class="btn login">Login</button></a>
                 <button class="btn register">Register</button>
             </div>
         </div>
@@ -47,10 +49,10 @@
     <section class="clients-section">
         <h2>Our Clients</h2>
         <div class="clients-logos">
-            <img src="image/logo5.png" alt="Client 1">
-            <img src="image/logo5.png" alt="Client 2">
-            <img src="image/logo5.png" alt="Client 3">
-            <img src="image/logo5.png" alt="Client 4">
+            <img src="image/logoo.jpg" alt="Client 1">
+            <img src="image/logoo.jpg" alt="Client 2">
+            <img src="image/logoo.jpg" alt="Client 3">
+            <img src="image/logoo.jpg" alt="Client 4">
         </div>
     </section>
 
@@ -73,6 +75,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- Feature Story Section -->
     <section class="feature-story-section">
@@ -109,5 +112,27 @@
             </div>
         </div>
     </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2024 Pupuk Organizer. All Rights Reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="js/script.js">
+        document.addEventListener('DOMContentLoaded', () => {
+            // Contoh: Memunculkan snackbar saat tombol ditekan
+            document.querySelector('.register-btn').addEventListener('click', () => {
+                showSnackbar('Successfully registered!');
+            });
+        });
+    </script>
 </body>
+
 </html>

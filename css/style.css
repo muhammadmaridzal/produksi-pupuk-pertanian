@@ -20,6 +20,13 @@ body {
    border-bottom: 1px solid #ddd;
 }
 
+.navbar.fixed {
+   position: fixed;
+   background-color: #fff; /* Change background color when fixed */
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   width: 100%; /* Add shadow for better visibility */
+}
+
 .logo {
    display: flex;
    align-items: center;
@@ -395,5 +402,111 @@ body {
    .stat-box {
       width: 100%;
       margin-bottom: 10px;
+   }
+}
+
+#snackbar {
+   visibility: hidden; /* Default: tidak terlihat */
+   min-width: 250px;
+   margin-left: -125px;
+   background-color: #333;
+   color: #fff;
+   text-align: center;
+   border-radius: 5px;
+   padding: 16px;
+   position: fixed;
+   z-index: 1000;
+   left: 50%; /* Pusat horizontal */
+   bottom: 30px; /* Posisi dari bawah */
+   font-size: 16px;
+   transition: visibility 0s, opacity 0.5s ease-in-out;
+   opacity: 0; /* Tidak terlihat secara visual */
+}
+
+/* Snackbar saat terlihat */
+#snackbar.show {
+   visibility: visible;
+   opacity: 1; /* Transisi ke terlihat */
+}
+
+.footer {
+   background-color: #333;
+   color: white;
+   padding: 20px 0;
+   text-align: center;
+   font-size: 14px;
+}
+
+.footer-container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 20px;
+}
+
+.footer-links {
+   list-style-type: none;
+   padding: 0;
+   margin: 10px 0;
+}
+
+.footer-links li {
+   display: inline;
+   margin: 0 15px;
+}
+
+.footer-links a {
+   color: white;
+   text-decoration: none;
+   font-size: 14px;
+}
+
+.footer-links a:hover {
+   text-decoration: underline;
+}
+.hamburger {
+   display: none;
+   cursor: pointer;
+   flex-direction: column;
+   gap: 4px;
+}
+
+.hamburger div {
+   width: 25px;
+   height: 3px;
+   background-color: #333;
+}
+
+/* Navigasi responsif */
+.nav-links {
+   display: flex;
+   gap: 20px;
+   list-style: none;
+}
+
+.nav-links a {
+   text-decoration: none;
+   color: #333;
+}
+
+/* Mode handphone */
+@media screen and (max-width: 768px) {
+   .nav-links {
+       display: none; /* Sembunyikan menu */
+       flex-direction: column;
+       background-color: #fff;
+       position: absolute;
+       top: 60px;
+       right: 0;
+       width: 200px;
+       padding: 10px;
+       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+   }
+
+   .nav-links.active {
+       display: flex; /* Tampilkan menu saat aktif */
+   }
+
+   .hamburger {
+       display: flex; /* Tampilkan tombol hamburger */
    }
 }
